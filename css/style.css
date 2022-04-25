@@ -815,16 +815,6 @@ body {
   }
 }
 
-@media (min-width: 36em) {
-  .benefits-slider__wrapper {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.875rem;
-  }
-}
-
 @media (min-width: 40em) {
   .hero__image {
     margin-right: -1.5625rem;
@@ -943,6 +933,16 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (min-width: 36em) and (max-width: 73.0625em) {
+  .benefits-slider__wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.875rem;
   }
 }
 
