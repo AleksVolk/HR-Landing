@@ -852,7 +852,7 @@ body {
   .about {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    row-gap: 2.8125rem;
+    row-gap: 2.5rem;
   }
 }
 
@@ -891,6 +891,10 @@ body {
 
   .hero__image:not(:last-child) {
     margin-bottom: 1.875rem;
+  }
+
+  .main-slider__image {
+    border-radius: 0.9375rem;
   }
 
   .worker-slider__wrapper:not(:last-child) {
