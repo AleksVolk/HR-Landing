@@ -1,3 +1,19 @@
+@font-face {
+  font-family: TrebuchetMS;
+  font-display: swap;
+  src: url("../fonts/TrebuchetMS-Bold.woff2") format("woff2"), url("../fonts/TrebuchetMS-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TrebuchetMS;
+  font-display: swap;
+  src: url("../fonts/TrebuchetMS.woff2") format("woff2"), url("../fonts/TrebuchetMS.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -331,6 +347,18 @@ body {
   max-width: 29.2%;
 }
 
+@supports (padding-left: clamp( 0.0000000625rem , -5.8646615014rem  +  12.2180449248vw , 4.0625rem )) {
+  .hero__body {
+    padding-left: clamp( 0.0000000625rem , -5.8646615014rem  +  12.2180449248vw , 4.0625rem );
+  }
+}
+
+@supports not (padding-left: clamp( 0.0000000625rem , -5.8646615014rem  +  12.2180449248vw , 4.0625rem )) {
+  .hero__body {
+    padding-left: calc(0.0000000625rem + 4.0624999375 * (100vw - 48rem) / 33.25);
+  }
+}
+
 @supports (margin-bottom: clamp( 1.875rem , 0.5484693878rem  +  6.6326530612vw , 5.9375rem )) {
   .hero__body:not(:last-child) {
     margin-bottom: clamp( 1.875rem , 0.5484693878rem  +  6.6326530612vw , 5.9375rem );
@@ -501,6 +529,10 @@ body {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.about__body {
+  max-width: 33.125rem;
 }
 
 @supports (padding-top: clamp( 1.875rem , -3.3720146379rem  +  13.0970724191vw , 7.1875rem )) {
@@ -688,6 +720,7 @@ body {
 }
 
 .worker-slider {
+  position: relative;
   padding-bottom: 7.5rem;
 }
 
@@ -701,6 +734,30 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 1.5625rem;
+}
+
+@supports (padding-left: clamp( 0.0000000625rem , -5.8646615014rem  +  12.2180449248vw , 4.0625rem )) {
+  .worker-slider__control {
+    padding-left: clamp( 0.0000000625rem , -5.8646615014rem  +  12.2180449248vw , 4.0625rem );
+  }
+}
+
+@supports not (padding-left: clamp( 0.0000000625rem , -5.8646615014rem  +  12.2180449248vw , 4.0625rem )) {
+  .worker-slider__control {
+    padding-left: calc(0.0000000625rem + 4.0624999375 * (100vw - 48rem) / 33.25);
+  }
+}
+
+@supports (margin-top: clamp( -3.75rem , 9.9953007519rem  +  -16.9172932331vw , 1.875rem )) {
+  .worker-slider__control {
+    margin-top: clamp( -3.75rem , 9.9953007519rem  +  -16.9172932331vw , 1.875rem );
+  }
+}
+
+@supports not (margin-top: clamp( -3.75rem , 9.9953007519rem  +  -16.9172932331vw , 1.875rem )) {
+  .worker-slider__control {
+    margin-top: calc(1.875rem + -5.625 * (100vw - 48rem) / 33.25);
+  }
 }
 
 .worker-slider__pagination {
@@ -717,6 +774,18 @@ body {
   -webkit-column-gap: 1.875rem;
      -moz-column-gap: 1.875rem;
           column-gap: 1.875rem;
+}
+
+@supports (padding-left: clamp( 0.0000000625rem , -5.8646615014rem  +  12.2180449248vw , 4.0625rem )) {
+  .worker-slide {
+    padding-left: clamp( 0.0000000625rem , -5.8646615014rem  +  12.2180449248vw , 4.0625rem );
+  }
+}
+
+@supports not (padding-left: clamp( 0.0000000625rem , -5.8646615014rem  +  12.2180449248vw , 4.0625rem )) {
+  .worker-slide {
+    padding-left: calc(0.0000000625rem + 4.0624999375 * (100vw - 48rem) / 33.25);
+  }
 }
 
 .worker-slide__content {
@@ -792,20 +861,6 @@ body {
 
 .swiper-button-lock {
   display: none !important;
-}
-
-@media (min-width: 47.99875em) {
-@supports (margin-top: clamp( -5rem , 13.5344827586rem  +  -22.9885057471vw , 2.5rem )) {
-    .worker-slider__control {
-      margin-top: clamp( -5rem , 13.5344827586rem  +  -22.9885057471vw , 2.5rem );
-    }
-}
-
-@supports not (margin-top: clamp( -5rem , 13.5344827586rem  +  -22.9885057471vw , 2.5rem )) {
-    .worker-slider__control {
-      margin-top: calc(2.5rem + -7.5 * (100vw - 48rem) / 32.625);
-    }
-}
 }
 
 @media (min-width: 73.125em) {
@@ -890,10 +945,6 @@ body {
     border-radius: 0.9375rem;
   }
 
-  .worker-slider__wrapper:not(:last-child) {
-    margin-bottom: 1.5625rem;
-  }
-
   .worker-slider__control {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -912,6 +963,10 @@ body {
 
   .worker-slider {
     padding-bottom: 1.875rem;
+  }
+
+  .worker-slide__body {
+    max-width: none;
   }
 
   .worker-slide__image {
