@@ -484,6 +484,7 @@ body {
 }
 
 .vacancies__label {
+  white-space: nowrap;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -863,6 +864,15 @@ body {
   display: none !important;
 }
 
+@media (min-width: 42.5625em) {
+  .hero__image {
+    margin-right: -1.5625rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
 @media (min-width: 73.125em) {
   .benefits-slider__wrapper {
     display: -ms-grid;
@@ -873,24 +883,11 @@ body {
   }
 }
 
-@media (min-width: 40em) {
-  .hero__image {
-    margin-right: -1.5625rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-}
-
 @media (max-width: 40em) {
   .btn {
     font-size: 1rem;
     padding: 0.3125rem 2rem;
     border-radius: 0.9375rem;
-  }
-
-  .hero__body {
-    max-width: none;
   }
 
   .about__image {
@@ -980,6 +977,12 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 42.5em) {
+  .hero__body {
+    max-width: none;
   }
 }
 
