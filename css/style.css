@@ -1001,6 +1001,7 @@ body {
 
 @media (max-width: 42.5em) {
   .hero__body {
+    padding-right: 0.75rem;
     max-width: none;
   }
 }
